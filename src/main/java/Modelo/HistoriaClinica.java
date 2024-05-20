@@ -15,5 +15,4 @@ public class HistoriaClinica {
     public String getVacunas(){
         return vacunas;
     }
-    public
 }

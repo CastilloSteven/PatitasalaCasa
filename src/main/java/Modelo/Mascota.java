@@ -9,14 +9,13 @@ public class Mascota {
     private int edad;
     
     public Mascota(String nombre,int id, Date Fllegada, String especie, String raza, int edad){
-    this.nombre=nombre;
-    this.id=id;
-    this.Fllegada=Fllegada;
-    this.especie=especie;
-    this.raza=raza;
-    this.edad=edad;
-   
-}
+        this.nombre=nombre;
+        this.id=id;
+        this.Fllegada=Fllegada;
+        this.especie=especie;
+        this.raza=raza;
+        this.edad=edad;
+    }
     public String getNombre(){
         return nombre;
     }
