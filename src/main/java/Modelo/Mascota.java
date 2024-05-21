@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.util.Date;
+
 public class Mascota {
     private String nombre;
     private int id;

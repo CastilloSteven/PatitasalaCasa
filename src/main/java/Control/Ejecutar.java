@@ -13,11 +13,14 @@ public class Ejecutar {
     public static int mostrarMenu(){
         String menu="PATITAS A LA CASA\n";
         menu+="MENU PRINCIPAL\n";
-        menu+="1. Ingresar cantidad dinero y ayudas \n";
-        menu+="2. Ingresar productos \n";
-        menu+="3. Ingresar Familias \n";
-        menu+="4. Mostrar Familias Ayudadas\n";
-        menu+="5. Salir \n";
+        menu+="1. Ingresar Administrador \n";
+        menu+="2. Ingresar datos de Mascotas \n";
+        menu+="3. Ingresar datos de Adoptante \n";
+        menu+="4. Test de idoneidad \n";
+        menu+="5. Ver mascotas \n";
+        menu+="6. Adoptar Mascota \n";
+        menu+="7. Revision de la Mascota \n";
+        menu+="8. Salir \n";
         return vista.pedirEntero(menu);
     }    
     
@@ -26,37 +29,32 @@ public class Ejecutar {
     public static void ejecutarMenu(int accion){
         switch(accion){
             case 1:
-                do{
-                    cantDinero=vista.pedirEntero("Ingrese el fondo de dinero (Minimo 500000$)");
-                    cantProds=vista.pedirEntero("Ingrese la cantidad de Productos");
-                }while(cantDinero<=500000 || cantProds<=0);
-                gobCargado=false;
-                gobierno=new Gobierno(cantDinero,cantProds);
-            break;
-            case 2:
-                if(gobCargado==false){                
-                    gobierno.crearProds();
-                    prodsCargado=false;
-                }else{
-                    vista.mostraDatos("Debe ingresar primero los fondos y cantidad de productos");
-                }
-            break;
-            case 3:
-                if(gobCargado==false && prodsCargado==false){
-                    gobierno.crearFamilias();
-                    famCargado=false;
-                }else{
-                    vista.mostraDatos("Debe ingresar primero los fondos, cantidad de productos y cargarlos");
-                }
-            break;
-            case 4:
-                if(gobCargado==false && prodsCargado==false && famCargado==false){
-                gobierno.evaluarFamilia();
-                }else{
-                    vista.mostraDatos("Debe ingresar primero las familias");
-                }
+                
             break;
             
+            case 2:
+                
+            break;
+            
+            case 3:
+                
+            break;
+            
+            case 4:
+                
+            break;
+            
+            case 5:
+                
+            break;
+            
+            case 6:
+                
+            break;
+            
+            case 7:
+                
+            break;
         }
     }
     
@@ -65,6 +63,6 @@ public class Ejecutar {
         do{
             opcion=mostrarMenu();
             ejecutarMenu(opcion);
-        }while(opcion!=5);
+        }while(opcion!=8);
     }
 }

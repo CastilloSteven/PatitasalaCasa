@@ -6,16 +6,26 @@ public class Persona {
     private String apellido;
     private int edad;
     private String correo;
+    private int numero;
 
 
-    public Persona(int cedula, String nombre, String apellido, int edad, String correo) {
+    public Persona(int cedula, String nombre, String apellido, int edad, String correo, int numero) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido=apellido;
         this.edad=edad;
         this.correo=correo;
-                
+        this.numero=numero;
+        
     }   
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 
     public int getCedula() {
         return cedula;
