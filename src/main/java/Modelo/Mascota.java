@@ -5,15 +5,17 @@ import java.util.Date;
 public class Mascota {
     private String nombre;
     private int id;
-    private Date Fllegada;
+    private Date fLlegada;
+    private Date fAdopcion;
     private String especie;
     private String raza;
     private int edad;
+    private HistoriaClinica hisClinica;
     
     public Mascota(String nombre,int id, Date Fllegada, String especie, String raza, int edad){
         this.nombre=nombre;
         this.id=id;
-        this.Fllegada=Fllegada;
+        this.fLlegada=Fllegada;
         this.especie=especie;
         this.raza=raza;
         this.edad=edad;
@@ -34,7 +36,7 @@ public class Mascota {
         return raza;
     }
     public Date getFllegada(){
-        return Fllegada;
+        return fLlegada;
     }
     public void setNombre(String nombre){
         this.nombre=nombre;
@@ -52,6 +54,23 @@ public class Mascota {
         this.raza=raza;
     }
     public void setFllegada(Date Fllegada){
-        this.Fllegada=Fllegada;
+        this.fLlegada=Fllegada;
+    }
+    public void setFAdopcion(Date FAdopcion){
+        this.fAdopcion=FAdopcion;
+    }
+    public Date getFAdopcion(){
+        return fAdopcion;
+    }
+    
+    
+    public String verHistoriaClinica(){
+        String m="Historial Clinico de "+ nombre+"\n";
+        m+="Vacunas:\n"+hisClinica.getVacunas()+"\n";
+        m+="Enfermedades:\n"+hisClinica.getEnfermedades()+"\n";
+        m+="Visitas al medico:\n"+hisClinica.getVisitasMedico()+"\n";
+        m+="Ultima visita:\n"+hisClinica.getUltimaVisita()+"\n";
+        m+="Descripcion adicional:\n"+hisClinica.getDesAdicional()+"\n";
+        return m;
     }
 }
