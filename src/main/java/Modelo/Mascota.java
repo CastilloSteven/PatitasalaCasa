@@ -56,12 +56,34 @@ public class Mascota {
     public void setFllegada(Date Fllegada){
         this.fLlegada=Fllegada;
     }
-    public void setFAdopcion(Date FAdopcion){
-        this.fAdopcion=FAdopcion;
+
+    public Date getfLlegada() {
+        return fLlegada;
     }
-    public Date getFAdopcion(){
+
+    public Date getfAdopcion() {
         return fAdopcion;
     }
+
+    public HistoriaClinica getHisClinica() {
+        return hisClinica;
+    }
+
+    public void setfLlegada(Date fLlegada) {
+        this.fLlegada = fLlegada;
+    }
+
+    public void setfAdopcion(Date fAdopcion) {
+        this.fAdopcion = fAdopcion;
+    }
+
+    public void setHisClinica(HistoriaClinica hisClinica) {
+        this.hisClinica = hisClinica;
+    }
+    
+    
+    
+    
     
     
     public String verHistoriaClinica(){
