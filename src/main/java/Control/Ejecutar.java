@@ -1,10 +1,12 @@
 package Control;
 
 import Vista.InOut;
+import Modelo.PatitasALaCasa;
 
 public class Ejecutar {
 // atributos
     static InOut vista=new InOut();
+    static PatitasALaCasa patitas;
     
     public static void main(String[] args){
         devolverMenu();
@@ -24,20 +26,20 @@ public class Ejecutar {
         return vista.pedirEntero(menu);
     }    
     
-        static int cantDinero=0, cantProds=0;
-        static boolean gobCargado=true, prodsCargado=true, famCargado=true;
+      /*  static int cantDinero=0, cantProds=0;
+        static boolean gobCargado=true, prodsCargado=true, famCargado=true;*/
     public static void ejecutarMenu(int accion){
         switch(accion){
             case 1:
-                
+                patitas.crearAdmin();
             break;
             
             case 2:
-                
+                patitas.crearMascota();
             break;
             
             case 3:
-                
+                patitas.crearAdoptante();
             break;
             
             case 4:

@@ -5,7 +5,7 @@ package Modelo;
 public class Adoptante extends Persona{
     private double salario;
 
-    public Adoptante(int cedula, String nombre, String apellido, int edad, String correo, int numero) {
+    public Adoptante(int cedula, String nombre, String apellido, int edad, String correo, int numero, double salario) {
         super(cedula, nombre, apellido, edad, correo, numero);
     }
 

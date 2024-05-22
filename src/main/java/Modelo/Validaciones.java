@@ -2,6 +2,7 @@ package Modelo;
 
 import Vista.InOut;
 import java.util.Date;
+import java.util.ArrayList;
 
 public class Validaciones {
 
@@ -21,9 +22,10 @@ public class Validaciones {
         return edad >= 18 && edad<=120;
     }
     
-    public boolean evaluared(int edad) {   
-        return edad >= 1 && edad <= 120;
+    public boolean evaluarEdadM(int edad){
+        return edad>=1 && edad<=30;
     }
+    
     public boolean evaluarFecha(Date Fecha){
         
         return true;
@@ -53,7 +55,23 @@ public class Validaciones {
         return valido;
    }
    
-}
+    public boolean evaluarIdPersona(ArrayList<Integer> idsExistentes, int nuevoId){
+        boolean valido = true;
+        for (int i=0; i<idsExistentes.size();i++){
+            if(nuevoId == idsExistentes.get(i)){
+                valido = false;
+            }
+        }
+       return valido;
+   }
     
-
-
+    public boolean evaluarIdMascotas(ArrayList<Integer> idsExistentes, int nuevoId){
+        boolean valido = true;
+        for (int i=0; i<idsExistentes.size();i++){
+            if(nuevoId == idsExistentes.get(i)){
+                valido = false;
+            }
+        }
+       return valido;
+   }
+}

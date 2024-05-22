@@ -5,7 +5,7 @@ import java.util.Date;
 public class Mascota {
     private String nombre;
     private int id;
-    private Date Fllegada; //arreglar el Date porque no se como se hace :D
+    private Date Fllegada;
     private String especie;
     private String raza;
     private int edad;

@@ -1,5 +1,6 @@
 package Vista;
 
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class InOut {
@@ -17,6 +18,10 @@ public class InOut {
     }
     public void mostraDatos2(int m){
         JOptionPane.showMessageDialog(null, m);
+    }
+
+    public Date pedirDate(String m){
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     
